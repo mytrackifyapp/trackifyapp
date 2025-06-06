@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import messages, { emails } from "@/components/constant/messages";
 import { applicationClientUrls } from "@/components/constant/urls";
 import LoginEmail from "@/components/email-template/login";
