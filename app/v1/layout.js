@@ -11,9 +11,9 @@ import { cookies } from "next/headers";
 import NextTopLoader from "nextjs-toploader";
 
 export const metadata = {
-  title: "FundWise| ",
+  title: "Trackify| ",
   description:
-    "FundWise is a robust expense tracking and management tool designed to simplify financial oversight for individuals and businesses.",
+    "Trackify is a robust expense tracking and management tool designed to simplify financial oversight for individuals and businesses.",
 };
 
 async function getUser(cookies) {

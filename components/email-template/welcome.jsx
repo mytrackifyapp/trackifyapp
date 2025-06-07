@@ -30,7 +30,7 @@ export default function WelcomeEmail() {
           <Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[20px] w-[465px]">
             <Section className="mt-[22px] bg-white">
               <Img
-                src="/trackifylogo.jpg"
+                src="https://trackifyapp.onrender.com/trackifylogo.jpg"
                 width="50"
                 height="50"
                 alt="trackify logo"
@@ -48,42 +48,35 @@ export default function WelcomeEmail() {
             </Text>
 
             <Text className="m-1">
-              1. Star our{" "}
+              1. Watch a demo video on how to use Trackify{" "}
               <Link
-                href={applicationClientUrls.social.githubRepo}
+                href="https://www.youtube.com/useTrackifyApp"
                 target="_blank"
                 className="underline"
               >
-                Github
+                YouTube
               </Link>{" "}
-              repository.
+              Link.
             </Text>
             <Text className="m-1">
               2. Follow us on <br />
               <Link
-                href={applicationClientUrls.social.twitter}
+                href="https://www.instagram.com/mytrackifyapp"
                 target="_blank"
                 className="underline"
               >
-                Twitter
+                Instagram
               </Link>
               <br />
               <Link
-                href={applicationClientUrls.social.linkedin}
+                href="https://www.x.com/trackifyAI"
                 target="_blank"
                 className="underline"
               >
-                Linkedin
+                X
               </Link>
               <br />
-              <Link
-                href={applicationClientUrls.social.github}
-                target="_blank"
-                className="underline"
-              >
-                Github
-              </Link>
-              .
+              
             </Text>
             <Text className="m-1">3. Finally, spread some word about us.</Text>
 

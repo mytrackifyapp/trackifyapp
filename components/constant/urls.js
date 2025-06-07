@@ -8,9 +8,10 @@ export const usagePlan = {
   premiumPlan: { limit: 1000, name: "premium" },
 };
 
-const domain = "https://trackifyapp.onrender.com/";
-const local = "localhost:3000";
-const home = isProduction ? domain : local;
+const domain = "your-vercel-domain.vercel.app"; // Replace with your Vercel domain
+const local = "localhost:3000"; // No protocol
+const rawHost = isProduction ? domain : local;
+const hostUrl = `${isProduction ? "https://" : "http://" }${rawHost}`;
 
 export const applicationClientUrls = {
   auth: {
@@ -34,7 +35,7 @@ export const applicationClientUrls = {
     },
   },
   host: {
-    home: `${isProduction ? "https://" : "http://"}${home}`,
+    home: hostUrl,
   },
 };
 
