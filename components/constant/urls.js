@@ -8,7 +8,7 @@ export const usagePlan = {
   premiumPlan: { limit: 1000, name: "premium" },
 };
 
-const domain = "https://trackifyapp-seven.vercel.app/";
+const domain = "https://trackifyapp.onrender.com/";
 const local = "localhost:3000";
 const home = isProduction ? domain : local;
 
