@@ -29,7 +29,7 @@ export const LoginEmail = ({ action_link = "" }) => {
           <Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[20px] w-[465px]">
           <Section className="mt-[22px] bg-white">
               <Img
-                src="/trackifylogo.jpg"
+                src="https://trackifyapp.onrender.com/trackifylogo.jpg"
                 width="50"
                 height="50"
                 alt="trackify logo"

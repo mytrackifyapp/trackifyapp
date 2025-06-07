@@ -20,10 +20,12 @@ export async function POST(request) {
       const token = generateToken({ email }, "10m");
       let nodemailerConfig = "";
 
-      const action_link =
+      const baseUrl =
         process.env.NODE_ENV === "production"
-          ? `${applicationClientUrls.host.home}/api/auth?token=${token}&type=login`
-          : `http://${process.env.NEXT_PUBLIC_SITE_URL}/api/auth?token=${token}&type=login`;
+          ? applicationClientUrls.host.home.replace(/\/+$/, "") // removes trailing slash
+          : process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "");
+
+      const action_link = `${baseUrl}/api/auth?token=${token}&type=login`;
 
       const loginEmailHtml = render(<LoginEmail action_link={action_link} />);
 
