@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: trackify
+    env: node
+    plan: free
+    buildCommand: "npm install && npx prisma generate && npm run build"
+    startCommand: "npm start"
+    envVars:
+      - key: DATABASE_URL
+        value: your-db-url
+      - key: EMAIL_USER
+        value: your-email
+      - key: EMAIL_PASS
+        value: your-pass
+      - key: NEXT_PUBLIC_SITE_URL
+        value: https://your-render-url.onrender.com

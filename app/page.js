@@ -168,7 +168,7 @@ export default function Home() {
           </Link>
 
           <Link
-            href="/signup"
+             href={applicationClientUrls.auth.register}
             className="hidden md:inline-flex h-[38px] items-center overflow-hidden rounded-md bg-gradient-to-r from-green-500 to-green-600 px-4 py-1 text-white hover:from-green-600 hover:to-green-700 transition-all shadow-md hover:shadow-lg"
           >
             Get Started
@@ -746,20 +746,20 @@ export default function Home() {
               {
                 content:
                   "Trackify has completely changed how I manage my business finances. The insights have helped me cut unnecessary expenses by 30%.",
-                author: "Sarah Johnson",
-                role: "Small Business Owner",
+                author: "Sarah A",
+                role: "Content Creator",
               },
               {
                 content:
                   "As someone who always struggled with budgeting, Trackify made it simple and even enjoyable. I've saved more in 6 months than I did in the past 2 years.",
-                author: "Michael Chen",
+                author: "Michael Kofi",
                 role: "Software Engineer",
               },
               {
                 content:
                   "The automated categorization and reporting save me hours each month. Trackify is an essential tool for our company's financial management.",
-                author: "Emma Rodriguez",
-                role: "CFO, TechStart Inc.",
+                author: "Divine Gabriel",
+                role: "CFO, Trackify Inc.",
               },
             ].map((testimonial, index) => (
               <motion.div
