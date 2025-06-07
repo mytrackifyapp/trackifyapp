@@ -218,7 +218,7 @@ export default function Home() {
           </motion.p>
           <motion.div className="mt-10 flex justify-center gap-x-6" variants={fadeIn}>
             <Link
-              href="/signup"
+              href={applicationClientUrls.auth.register}
               className="group inline-flex items-center justify-center rounded-full bg-gradient-to-r from-green-500 to-green-600 px-8 py-3 text-md font-semibold text-white hover:from-green-600 hover:to-green-700 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 active:bg-green-800 active:text-green-100 shadow-md hover:shadow-lg transition-all"
             >
               Get started for free
@@ -836,7 +836,7 @@ export default function Home() {
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
                   <Link
-                    href="/signup"
+                    href={applicationClientUrls.auth.register}
                     className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all"
                   >
                     Get started
