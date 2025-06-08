@@ -32,6 +32,28 @@ export default function Home() {
     testimonials: false,
     cta: false,
   })
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  useEffect(() => {
+    let timeoutId;
+
+    const handleScroll = () => {
+      setIsScrolling(true);
+
+      // Hide the header after 2 seconds of no scrolling
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        setIsScrolling(false);
+      }, 2000);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timeoutId);
+    };
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -129,16 +151,20 @@ export default function Home() {
       )}
 
       {/* Header */}
-      <header className="relative z-10 m-auto h-[70px] max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-      <Link
-            href={"/"}
-            className="flex max-w-[180px] items-center gap-2 p-3 text-2xl group"
-          >
-            <img
-    src="/trackifylogo.jpg" 
-    alt="Trackify Logo"
-    className="w-11 h-11 rounded-full shadow-lg group-hover:rotate-12 group-hover:bg-black/90 transition-all ease-in duration-200"
-  />
+      <header
+        className={`fixed top-0 z-50 bg-white shadow-md w-full h-[70px] px-4 sm:px-6 lg:px-8 flex items-center justify-between transition-transform duration-300 ${
+          isScrolling ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <Link
+          href={"/"}
+          className="flex max-w-[180px] items-center gap-2 p-3 text-2xl group"
+        >
+          <img
+            src="/trackifylogo.jpg"
+            alt="Trackify Logo"
+            className="w-11 h-11 rounded-full shadow-lg group-hover:rotate-12 group-hover:bg-black/90 transition-all ease-in duration-200"
+          />
           <span className="font-black tracking-[-0.03em] text-[#13131A] group-hover:text-[#13131A]/90 transition-all ease-in duration-200 text-xl">
             Trackify
           </span>
@@ -168,7 +194,7 @@ export default function Home() {
           </Link>
 
           <Link
-             href={applicationClientUrls.auth.register}
+            href={applicationClientUrls.auth.register}
             className="hidden md:inline-flex h-[38px] items-center overflow-hidden rounded-md bg-gradient-to-r from-green-500 to-green-600 px-4 py-1 text-white hover:from-green-600 hover:to-green-700 transition-all shadow-md hover:shadow-lg"
           >
             Get Started
@@ -218,7 +244,7 @@ export default function Home() {
           </motion.p>
           <motion.div className="mt-10 flex justify-center gap-x-6" variants={fadeIn}>
             <Link
-              href={applicationClientUrls.auth.register}
+              href="/signup"
               className="group inline-flex items-center justify-center rounded-full bg-gradient-to-r from-green-500 to-green-600 px-8 py-3 text-md font-semibold text-white hover:from-green-600 hover:to-green-700 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 active:bg-green-800 active:text-green-100 shadow-md hover:shadow-lg transition-all"
             >
               Get started for free
