@@ -1,23 +1,21 @@
+import nextPWA from 'next-pwa';
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["www.google.com"],
+    domains: ['www.google.com'],
   },
   experimental: {
     missingSuspenseWithCSRBailout: false,
   },
 };
 
-
-const withPWA = require('next-pwa')({
+// Merge with PWA
+export default nextPWA({
+  ...nextConfig,
   dest: 'public',
   register: true,
   skipWaiting: true,
 });
-
-module.exports = withPWA({
-  reactStrictMode: true,
-});
-
-export default nextConfig;
