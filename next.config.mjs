@@ -1,24 +1,20 @@
-import nextPWA from 'next-pwa';
+import withPWA from 'next-pwa';
 
 /** @type {import('next').NextConfig} */
-const baseConfig = {
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['www.google.com'], // Add other domains if needed
+    domains: ['www.google.com'],
   },
   experimental: {
     missingSuspenseWithCSRBailout: false,
   },
+  pwa: {
+    dest: 'public',
+    register: true,
+    skipWaiting: true,
+  },
 };
 
-const pwaConfig = {
-  dest: 'public',
-  register: true,
-  skipWaiting: true,
-};
-
-export default nextPWA({
-  ...baseConfig,
-  pwa: pwaConfig, // Pass PWA-specific options here
-});
+export default withPWA(nextConfig);
