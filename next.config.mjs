@@ -1,7 +1,7 @@
 import nextPWA from 'next-pwa';
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const baseConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
@@ -12,10 +12,11 @@ const nextConfig = {
   },
 };
 
-// Merge with PWA
 export default nextPWA({
-  ...nextConfig,
-  dest: 'public',
-  register: true,
-  skipWaiting: true,
+  ...baseConfig,
+  pwa: {
+    dest: 'public',
+    register: true,
+    skipWaiting: true,
+  },
 });
