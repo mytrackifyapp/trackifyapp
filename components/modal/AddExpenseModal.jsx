@@ -119,7 +119,7 @@ export default function AddExpenseModal({
             <Input
               className="mt-1.5 h-8 dark:bg-[#09090a]"
               id="name"
-              placeholder="Swiggy - Biriyani"
+              placeholder="Apple - iphone 16"
               maxLength={30}
               required
               ref={inputRef}
