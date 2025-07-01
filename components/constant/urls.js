@@ -8,7 +8,7 @@ export const usagePlan = {
   premiumPlan: { limit: 1000, name: "premium" },
 };
 
-const domain = "trackifyapp.onrender.com";
+const domain = "mytrackify.com";
 const local = "localhost:3000"; // No protocol
 const rawHost = isProduction ? domain : local;
 const hostUrl = `${isProduction ? "https://" : "http://" }${rawHost}`;
