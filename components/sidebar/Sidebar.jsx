@@ -54,41 +54,21 @@ const actionableDashboardLinks = [
     Icon: SubscriptionsIcon,
     shortcutText: keywordShortcuts.menu.subscriptions.shortcut,
   },
-  {
-    name: "External App", // Name for your custom button
-    href: "https://my-awesome-chatbot-beta-hazel.vercel.app/", // Replace with the external app URL
-    Icon: () => (
-      <img
-        src="/trackifylogo.jpg" // Path to your logo in the public folder
-        alt="External App Logo"
-        className="w-6 h-6 rounded-full"
-      />
-    ),
-  },
+
+
+ 
 
   // {
   //   name: "External App", // Name for your custom button
   //   href: "https://my-awesome-chatbot-beta-hazel.vercel.app/", // Replace with the external app URL
   //   Icon: () => (
   //     <img
-  //       src="/trackifyai.png" // Path to your logo in the public folder
+  //       src="/trackifyai5.png" // Path to your logo in the public folder
   //       alt="External App Logo"
   //       className="w-6 h-6 rounded-full"
   //     />
   //   ),
   // },
-
-  {
-    name: "External App", // Name for your custom button
-    href: "https://my-awesome-chatbot-beta-hazel.vercel.app/", // Replace with the external app URL
-    Icon: () => (
-      <img
-        src="/trackifyai5.png" // Path to your logo in the public folder
-        alt="External App Logo"
-        className="w-6 h-6 rounded-full"
-      />
-    ),
-  },
 ];
 
 const nonActionableDashboardLinks = [

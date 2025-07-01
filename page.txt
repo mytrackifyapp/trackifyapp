@@ -1,0 +1,259 @@
+import { applicationClientUrls } from "@/components/constant/urls";
+import Link from "next/link";
+import { FaGithub, FaCircleCheck } from "react-icons/fa6";
+
+const Home = () => {
+  return (
+    <div className="relative h-full text-[#13131A]">
+      <header className="relative m-auto h-[56px] max-w-5xl pt-3">
+        <div className="absolute left-0 right-0 top-3 z-20 flex items-center justify-between">
+          <Link
+            href={"/"}
+            className="flex max-w-[180px] items-center gap-2 p-3 text-2xl group"
+          >
+            <img
+    src="/trackifylogo.jpg" 
+    alt="Trackify Logo"
+    className="w-11 h-11 rounded-full shadow-lg group-hover:rotate-12 group-hover:bg-black/90 transition-all ease-in duration-200"
+  />
+            <span className="font-black tracking-[-0.03em] text-[#13131A] group-hover:text-[#13131A]/90 transition-all ease-in duration-200">
+            Trackify
+            </span>
+          </Link>
+          <Link
+            href={applicationClientUrls.auth.login}
+            className="leading-2 mr-4 inline-flex h-[34px] items-center overflow-hidden rounded-md text-white bg-gray-900 px-4 py-1 text-sm font-medium transition hover:bg-primary/90"
+          >
+            Login
+          </Link>
+        </div>
+      </header>
+      <main>
+        <div className="absolute top-0 -z-10 h-full w-full bg-white">
+          <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div>
+        </div>
+        <div className="mx-auto mb-16 mt-16 max-w-md px-3 text-center sm:max-w-3xl sm:px-0">
+          <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-5xl font-sans py-2 md:py-3 relative z-20 font-black tracking-tight">
+            Simplifying Financial Oversight with Advanced Expense Tracking,
+            Management and AI
+          </h1>
+          <p className="mt-3 text-base font-normal leading-6 tracking-tight sm:text-lg">
+           Trackify empowers users with intuitive features for effortless
+            expense tracking and comprehensive financial management, ensuring
+            streamlined budgeting and compliance.
+          </p>
+          <div className="mt-10 flex justify-center">
+            <Link
+              href={applicationClientUrls.auth.register}
+              className="inline-flex h-[34px] items-center justify-center rounded-md text-white bg-gray-900 px-4 py-2.5 text-md font-medium hover:bg-primary/90 hover:shadow"
+            >
+              Get Started
+            </Link>
+            {/* <Link
+              target="_blank"
+              href={applicationClientUrls.social.githubRepo}
+              className="ml-6 inline-flex h-[34px] items-center justify-center gap-1 rounded-md bg-white/0 px-4 py-2.5 text-md font-medium text-[#13131A] ring-1 ring-[#13131A]/10 hover:bg-gray-100 hover:shadow"
+            >
+              <FaGithub />
+              Star on GitHub
+            </Link> */}
+          </div>
+        </div>
+
+        <div className="mx-auto mb-16 mt-32 grid max-w-md justify-center px-3 text-center sm:px-0 md:max-w-[600px]">
+          <h2 className="mt-0 text-3xl font-extrabold tracking-[-0.03em] text-black sm:text-4xl">
+            Pricing Plans
+          </h2>
+          <div className="mt-8 flex w-full flex-col sm:flex-row">
+            <div className="min-w-[330px] divide-y divide-gray-600 rounded-lg border border-slate-800 text-left shadow-lg sm:mr-8">
+              <div className="p-5 py-6">
+                <h2 className="text-3xl font-extrabold leading-6">Basic</h2>
+                <p className="mb-2 mt-2 text-[#13131A]">
+                  Free forever with limits.
+                </p>
+                <p className="mt-4 flex  items-center">
+                  <span className="text-3xl font-extrabold flex items-center">
+                  ₵ 0
+                  </span>{" "}
+                  <span className="text-base  text-[#13131A]"> per year</span>
+                </p>
+                <div className="mb-0 ml-1 mt-4 flex flex-col justify-center text-left ">
+                  <span className="m-1 ml-0 flex items-center  text-[15px]">
+                    <FaCircleCheck className="mr-1 h-4 w-4 text-green-600" />
+                    Trend visualisation with charts
+                  </span>
+                  <span className="m-1 ml-0 flex items-center text-[15px]">
+                    <FaCircleCheck className="mr-1 h-4 w-4 text-green-600" />
+                    <span>Add up to 200 entries per account</span>
+                  </span>
+                  <span className="m-1 ml-0 flex items-center text-[15px]">
+                    <FaCircleCheck className="mr-1 h-4 w-4 text-green-600" />
+                    Track subscription billing dates
+                  </span>
+                  <span className="m-1 ml-0 flex items-center text-[15px]">
+                    <FaCircleCheck className="mr-1 h-4 w-4 text-green-600" />
+                    Choose preferred currency display
+                  </span>
+                  <span className="m-1 ml-0 flex items-center text-[15px]">
+                    <FaCircleCheck className="mr-1 h-4 w-4 text-green-600" />
+                    Email support available
+                  </span>
+                </div>
+                <a
+                  className="leading-2 w-full inline-flex h-[34px] items-center justify-center mt-8 overflow-hidden rounded-md text-white bg-gray-900 px-4 py-1 text-sm font-medium transition hover:bg-primary/90"
+                  href={applicationClientUrls.auth.register}
+                >
+                  Start for free
+                </a>
+              </div>
+            </div>
+            <div className="bg-pro-plan mt-8  min-w-[330px] divide-y divide-gray-600 rounded-lg border border-slate-800 text-left shadow-lg sm:mt-0">
+              <div className="p-5 py-6">
+                <h2 className="text-3xl font-extrabold leading-6">Premium</h2>
+                <p className="mb-2 mt-2 text-[#13131A]">
+                  Access to all premium features.
+                </p>
+                <p className="mt-4 flex  items-center">
+                  <span className="text-3xl font-extrabold flex items-center">
+                  ₵ 150
+                  </span>{" "}
+                  <span className="text-base  text-[#13131A]"> per year</span>
+                </p>
+                <div className="mb-0 ml-1 mt-4 flex flex-col justify-center text-left ">
+                  <span className="m-1 ml-0 flex items-center  text-[15px]">
+                    <FaCircleCheck className="mr-1 h-4 w-4 text-green-600" />
+                    Everything in Basic plan
+                  </span>
+                  <span className="m-1 ml-0 flex items-center text-[15px]">
+                    <FaCircleCheck className="mr-1 h-4 w-4 text-green-600" />
+                    <span>
+                      Add up to{" "}
+                      {applicationClientUrls.config.premiumPlan.usageLimit}{" "}
+                      entries per account
+                    </span>
+                  </span>
+                  <span className="m-1 ml-0 flex items-center text-[15px]">
+                    <FaCircleCheck className="mr-1 h-4 w-4 text-green-600" />
+                    <span>Advanced trend visualisation</span>
+                  </span>
+                  <span className="m-1 ml-0 flex items-center text-[15px]">
+                    <FaCircleCheck className="mr-1 h-4 w-4 text-green-600" />
+                    <span>Export data as CSV</span>
+                  </span>
+                  <span className="m-1 ml-0 flex items-center text-[15px]">
+                    <FaCircleCheck className="mr-1 h-4 w-4 text-green-600" />
+                    <span>Priority support with quick reply</span>
+                  </span>
+                </div>
+                <a
+                  className="leading-2 w-full inline-flex h-[34px] items-center justify-center mt-8 overflow-hidden rounded-md text-white bg-gray-900 px-4 py-1 text-sm font-medium transition hover:bg-primary/90"
+                  href={applicationClientUrls.auth.register}
+                >
+                  Get started
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* New Sections Start Here */}
+
+        {/* Features Section */}
+        <section id="features" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+          <div className="mx-auto max-w-6xl px-4 text-center">
+            <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+              Why Choose Trackify?
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Discover the features that make Trackify the ultimate financial management tool.
+            </p>
+            <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform">
+                <FaCircleCheck className="text-green-600 text-5xl" />
+                <h3 className="mt-4 text-xl font-semibold text-gray-900">
+                  Expense Tracking
+                </h3>
+                <p className="mt-2 text-gray-600">
+                  Track your expenses effortlessly with intuitive tools.
+                </p>
+              </div>
+              <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform">
+                <FaCircleCheck className="text-green-600 text-5xl" />
+                <h3 className="mt-4 text-xl font-semibold text-gray-900">
+                  Budget Management
+                </h3>
+                <p className="mt-2 text-gray-600">
+                  Create and manage budgets to stay on top of your finances.
+                </p>
+              </div>
+              <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform">
+                <FaCircleCheck className="text-green-600 text-5xl" />
+                <h3 className="mt-4 text-xl font-semibold text-gray-900">
+                  AI Insights
+                </h3>
+                <p className="mt-2 text-gray-600">
+                  Leverage AI to gain actionable insights into your spending habits.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Video Section */}
+        <section id="video" className="py-20 bg-gray-900 text-white">
+          <div className="mx-auto max-w-6xl px-4 text-center">
+            <h2 className="text-4xl font-extrabold sm:text-5xl">
+              See Trackify in Action
+            </h2>
+            <p className="mt-4 text-lg text-gray-300">
+              Watch our demo video to learn how Trackify can transform your financial management.
+            </p>
+            <div className="mt-8">
+              <video
+                controls
+                className="w-full max-w-4xl rounded-lg shadow-lg border-4 border-gray-700"
+              >
+                <source src="/demo-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </section>
+
+        {/* AI Chatbot Section */}
+        <section id="ai-chatbot" className="py-20 bg-gradient-to-b from-white to-gray-50">
+          <div className="mx-auto max-w-6xl px-4 text-center">
+            <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+              Meet Your AI Financial Assistant
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Introducing our AI chatbot, your personal assistant for financial advice and support.
+            </p>
+            <div className="mt-8 flex justify-center">
+              <img
+                src="/ai-chatbot.png"
+                alt="AI Chatbot"
+                className="w-64 h-64 rounded-full shadow-lg hover:scale-105 transition-transform"
+              />
+            </div>
+            <p className="mt-6 text-gray-600">
+              Ask questions, get insights, and manage your finances with ease.
+            </p>
+            <div className="mt-8">
+              <a
+                href="https://example.com/ai-assistant" // Replace with your external link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 px-6 py-3 text-white text-lg font-medium hover:from-blue-600 hover:to-indigo-700 shadow-lg transition-all"
+              >
+                Try Now
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+};
+
+export default Home;
