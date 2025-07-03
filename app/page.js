@@ -134,17 +134,7 @@ export default function Home() {
               <X className="h-6 w-6 text-gray-800" />
             </button>
             <div className="aspect-video bg-black rounded-lg flex items-center justify-center">
-              <div className="text-white text-lg"></div>
-              {/* Replace with actual video */}
-              <video
-                ref={videoRef}
-                className="w-full h-full object-cover"
-                controls
-                poster="/placeholder.svg?height=720&width=1280"
-              >
-                <source src="/demo.mov" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BNP8WhleNgk?si=aDR3U7PM2LczF-Sl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -181,9 +171,9 @@ export default function Home() {
             <Link href="#testimonials" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
               Testimonials
             </Link>
-            <Link href="#faq" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
+            {/* <Link href="#faq" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
               FAQ
-            </Link>
+            </Link> */}
           </nav>
 
           <Link
@@ -314,7 +304,7 @@ export default function Home() {
                   </p>
                   <p className="mt-6">
                     <Link
-                      href="#"
+                      href="https://www.instagram.com/p/DLoyXdDsbah/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
                       className="text-sm font-semibold leading-6 text-green-600 hover:text-green-700 transition-colors"
                     >
                       Learn more <span aria-hidden="true">→</span>
@@ -340,7 +330,7 @@ export default function Home() {
                   </p>
                   <p className="mt-6">
                     <Link
-                      href="#"
+                      href="https://www.instagram.com/p/DLoyXdDsbah/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
                       className="text-sm font-semibold leading-6 text-green-600 hover:text-green-700 transition-colors"
                     >
                       Learn more <span aria-hidden="true">→</span>
@@ -366,7 +356,7 @@ export default function Home() {
                   </p>
                   <p className="mt-6">
                     <Link
-                      href="#"
+                      href="https://www.instagram.com/p/DLoyXdDsbah/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
                       className="text-sm font-semibold leading-6 text-green-600 hover:text-green-700 transition-colors"
                     >
                       Learn more <span aria-hidden="true">→</span>
@@ -772,12 +762,12 @@ export default function Home() {
               {
                 content:
                   "Trackify has completely changed how I manage my business finances. The insights have helped me cut unnecessary expenses by 30%.",
-                author: "Sarah A",
+                author: "Sarah Akua",
                 role: "Content Creator",
               },
               {
                 content:
-                  "As someone who always struggled with budgeting, Trackify made it simple and even enjoyable. I've saved more in 6 months than I did in the past 2 years.",
+                  "As someone who always struggled with budgeting, Trackify made it simple and even enjoyable.",
                 author: "Michael Kofi",
                 role: "Software Engineer",
               },
@@ -785,7 +775,7 @@ export default function Home() {
                 content:
                   "The automated categorization and reporting save me hours each month. Trackify is an essential tool for our company's financial management.",
                 author: "Divine Gabriel",
-                role: "CFO, Trackify Inc.",
+                role: "CEO, Rizzbrand",
               },
             ].map((testimonial, index) => (
               <motion.div
@@ -868,17 +858,17 @@ export default function Home() {
                     Get started
                   </Link>
                   <button onClick={openVideo} className="text-sm font-semibold leading-6 text-white flex items-center">
-                    <Play className="mr-2 h-4 w-4" /> Watch demo <span aria-hidden="true">→</span>
+                    <Play className="mr-2 h-4 w-4" /> Use Trackify like an app <span aria-hidden="true">→</span>
                   </button>
                 </div>
               </div>
               <div className="relative mt-16 h-80 lg:mt-8">
                 <div className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10 h-[400px] overflow-hidden">
-                  <img
+                  {/* <img
                     src="/screenshot.jpg" // Replace with the actual image file name in your public folder
                     alt="App Screenshot"
                     className="w-full h-full object-cover"
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
