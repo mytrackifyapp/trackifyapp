@@ -578,12 +578,12 @@ export default function Home() {
                 </ul>
                 <div className="mt-8">
                   <Link
-                    href="https://my-awesome-chatbot-beta-hazel.vercel.app/" // Replace with your external URL
+                    href="#" // Replace with your external URL
                     target="_blank" // Opens the link in a new tab
                     rel="noopener noreferrer" // Improves security for external links
                     className="inline-flex items-center rounded-md py-2.5 px-4 text-sm font-semibold text-gray-900 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 transition-all shadow-md"
                   >
-                    Try Trackify AI<ArrowRight className="ml-2 h-4 w-4" />
+                   Deploys Soon<ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </div>
               </div>
@@ -858,7 +858,7 @@ export default function Home() {
                     Get started
                   </Link>
                   <button onClick={openVideo} className="text-sm font-semibold leading-6 text-white flex items-center">
-                    <Play className="mr-2 h-4 w-4" /> Use Trackify like an app <span aria-hidden="true">→</span>
+                    <Play className="mr-2 h-4 w-4" /> Watch Demo <span aria-hidden="true">→</span>
                   </button>
                 </div>
               </div>
